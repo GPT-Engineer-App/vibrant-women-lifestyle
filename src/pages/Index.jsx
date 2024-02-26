@@ -57,14 +57,18 @@ const Index = () => {
                 <Box key={i} borderRadius="md" overflow="hidden">
                   <Image src="https://images.unsplash.com/photo-1599566276129-97d70dfdda11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxhcnRpY2xlJTIwdGh1bWJuYWlsfGVufDB8fHx8MTcwODk2MTYzNXww&ixlib=rb-4.0.3&q=80&w=1080" alt="Article thumbnail" />
                   <Box p="5">
-                    <Text fontWeight="bold" fontSize="lg">
-                      Article Title Here
-                    </Text>
+                    <Link to="/article" style={{ textDecoration: "none" }}>
+                      <Box p="5">
+                        <Text fontWeight="bold" fontSize="lg" _hover={{ color: "teal.500" }}>
+                          Article Title Here
+                        </Text>
+                      </Box>
+                    </Link>
                     <Text mt="2" fontSize="sm" color="gray.600">
                       Short description of the article content...
                     </Text>
                     <HStack justify="space-between" mt="4">
-                      <Link color="pink.400" fontWeight="bold">
+                      <Link to="/article" style={{ textDecoration: "none", color: "pink.400", fontWeight: "bold" }}>
                         Read More
                       </Link>
                       <IconButton icon={<FaRegHeart />} aria-label="Like" variant="ghost" />
